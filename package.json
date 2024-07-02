@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass main.scss main.css --watch",
+    "sass": "sass source/main.scss build/main.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -13,3 +13,4 @@
     "sass": "^1.77.6"
   }
 }
+
