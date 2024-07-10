@@ -33,6 +33,7 @@ header .container .menu {
 header .container .menu li {
   font-weight: bold;
   margin-left: 24px;
+  list-style-type: none;
 }
 header .container .menu li a {
   color: #fff;
@@ -41,6 +42,7 @@ header .container .menu li a {
 
 section {
   padding: 56px 0;
+  color: #fff;
 }
 section .products {
   margin-top: 40px;
@@ -50,11 +52,11 @@ section .products {
   row-gap: 4%;
   width: 100%;
 }
-section img {
-  width: 100%;
-  border-radius: 16px;
+section .products li {
+  color: #fff;
+  list-style-type: none;
 }
-section button {
+section .products .product-button {
   display: block;
   background-color: #01c38e;
   color: #fff;
@@ -64,24 +66,31 @@ section button {
   margin-top: 8px;
   text-decoration: none;
 }
-section button:hover {
+section .products .product-button:hover {
   background-color: #00916a;
 }
+section img {
+  width: 100%;
+  border-radius: 16px;
+}
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1023px) {
   .container {
     max-width: 80%;
   }
-  .products {
+  .container .products {
     grid-template-columns: repeat(2, 48.5%);
     column-gap: 3%;
   }
 }
-@media screen and (max-width: 1023px) {
-  .products {
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 80%;
+  }
+  .container .products {
     display: block;
   }
-  .product-item {
+  .container .products .product-item {
     margin-bottom: 32px;
   }
 }

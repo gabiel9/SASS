@@ -13,7 +13,6 @@ body {
 }
 
 header {
-
     background-color: variaveis.$corPrincipal;
     position: sticky;
     top: 0;
@@ -27,70 +26,89 @@ header {
 
         .menu {
             display: flex;
-        }
 
-        .menu li {
-            font-weight: bold;
-            margin-left: 24px;
-        }
+            
 
-        .menu li a {
-            color: variaveis.$corText;
-            text-decoration: none;
+            li {
+                font-weight: bold;
+                margin-left: 24px;
+                list-style-type: none;
+
+                a {
+                    color: variaveis.$corTexto;
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
 
 section {
     padding: 56px 0;
+    color: variaveis.$corTexto;
 
     .products {
+        
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3, 32.66%);
         column-gap: 1%;
         row-gap: 4%;
         width: 100%;
+
+        li {
+            color: variaveis.$corTexto;
+            list-style-type: none;
+        }
+
+        .product-button {
+            display: block;
+            background-color: variaveis.$corPrincipal;
+            color: variaveis.$corTexto;
+            text-align: center;
+            padding: 8px 0;
+            border-radius: 8px;
+            margin-top: 8px;
+            text-decoration: none;
+    
+            &:hover {
+                background-color: variaveis.$corHover;
+            }
+        }
     }
 
         img {
             width: 100%;
             border-radius: 16px;
+
     }
 
-    button {
-        display: block;
-        background-color: variaveis.$corPrincipal;
-        color: variaveis.$corText;
-        text-align: center;
-        padding: 8px 0;
-        border-radius: 8px;
-        margin-top: 8px;
-        text-decoration: none;
+    
+}
 
-        &:hover {
-            background-color: variaveis.$corHover;
+@media screen and (max-width: variaveis.$tablet) {
+    .container {
+        max-width: 80%;
+    
+        .products {
+            grid-template-columns: repeat(2, 48.5%);
+            column-gap: 3%;
         }
+    
     }
 }
 
 @media screen and (max-width: variaveis.$mobile) {
+
     .container {
         max-width: 80%;
-    }
 
-    .products {
-        grid-template-columns: repeat(2, 48.5%);
-        column-gap: 3%;
-    }
-}
+        .products {
+            display: block;
 
-@media screen and (max-width: variaveis.$tablet) {
-    .products {
-        display: block;
-    }
-
-    .product-item  {
-        margin-bottom: 32px;
+            .product-item  {
+                margin-bottom: 32px;
+            }
+        }
     }
 }
